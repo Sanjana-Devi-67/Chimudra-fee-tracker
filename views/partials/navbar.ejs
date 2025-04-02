@@ -1,0 +1,42 @@
+<nav style="background: white; padding: 15px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <!-- Logo -->
+        <div>
+            <a href="/" style="text-decoration: none; color: darkred; font-size: 24px; font-weight: bold;">
+                Chinumdra Academy
+            </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <!-- <div>
+            <a href="/chimudra/dashboard" style="margin-right: 15px; color: darkred; text-decoration: none;">Dashboard</a>
+            <a href="/chimudra/batches" style="margin-right: 15px; color: darkred; text-decoration: none;">Batches</a>
+            <a href="/chimudra/paymentHistory" style="margin-right: 15px; color: darkred; text-decoration: none;">Payment History</a>
+            <a href="/chimudra/admin/login" style="margin-right: 15px; color: darkred; text-decoration: none;">Admin</a>
+            <a href="/chimudra/logout" style="color: darkred; text-decoration: none;">Logout</a>
+        </div> -->
+        <div>
+            <% if (session.userId && session.role === 'user') { %>
+                <a href="/chimudra/dashboard" style="margin-right: 15px; color: darkred; text-decoration: none;">Dashboard</a>
+                <a href="/chimudra/batches" style="margin-right: 15px; color: darkred; text-decoration: none;">Batches</a>
+                <a href="/chimudra/payments/history/<%=userId%>" style="margin-right: 15px; color: darkred; text-decoration: none;">Payment History</a>
+            <% } %>
+        
+            <% if (!session.userId ) { %>
+                <!-- Show Admin Login only if NOT admin -->
+                <a href="/chimudra/admin/login" style="margin-right: 15px; color: darkred; text-decoration: none;">Admin</a>
+            <% } %>
+        
+            <% if (session.userId) { %>
+                <!-- Show Logout only when logged in -->
+                <a href="/chimudra/logout" style="color: darkred; text-decoration: none;">Logout</a>
+            <% } else { %>
+                <!-- Show Signup/Login when NOT logged in -->
+                <a href="/chimudra/login" style="margin-right: 15px; color: darkred; text-decoration: none;">Login</a>
+                <a href="/chimudra/register" style="color: darkred; text-decoration: none;">Signup</a>
+            <% } %>
+            
+        </div>
+        
+    </div>
+</nav>

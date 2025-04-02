@@ -1,0 +1,36 @@
+
+:root {
+    --primary-red: #B31312;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading {
+    font-family: 'Playfair Display', serif;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(179, 19, 18, 0.2);
+}
+
+.mandala-bg {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="%23B31312" stroke-width="0.5" opacity="0.1"/></svg>');
+    background-size: 200px;
+}
+
+#loginForm, #signupForm {
+    display: none;
+}
+
+#dashboard, #batchSelection, #paymentHistory {
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+

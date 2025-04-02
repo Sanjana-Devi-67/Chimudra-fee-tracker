@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinmudra Academy for Performing Arts - Students</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #B31312;
+            --white: #ffffff;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .mandala-bg {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="%23B31312" stroke-width="0.5" opacity="0.1"/></svg>');
+            background-size: 200px;
+        }
+    </style>
+</head>
+<body class="bg-white mandala-bg min-h-screen">
+    <%- include('../partials/navbar') %>
+
+    <div class="max-w-4xl mx-auto mt-10 p-8 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-red-600 mb-6 heading text-center">All Students</h1>
+
+        <% if (students.length > 0) { %>
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-gray-300">
+                    <thead class="bg-red-600 text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left">#</th>
+                            <th class="py-3 px-4 text-left">Name</th>
+                            <th class="py-3 px-4 text-left">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% students.forEach(function(student, index) { %>
+                            <tr class="border-b hover:bg-red-50">
+                                <td class="py-2 px-4"><%= index + 1 %></td>
+                                <td class="py-2 px-4 font-medium text-gray-800"><%= student.name %></td>
+                                <td class="py-2 px-4 text-gray-700"><%= student.email %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        <% } else { %>
+            <p class="text-gray-600">No students found.</p>
+        <% } %>
+    </div>
+</body>
+</html>
