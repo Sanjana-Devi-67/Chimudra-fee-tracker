@@ -19,7 +19,7 @@
             <% if (session.userId && session.role === 'user') { %>
                 <a href="/chimudra/dashboard" style="margin-right: 15px; color: darkred; text-decoration: none;">Dashboard</a>
                 <a href="/chimudra/batches" style="margin-right: 15px; color: darkred; text-decoration: none;">Batches</a>
-                <a href="/chimudra/payments/history/<%=userId%>" style="margin-right: 15px; color: darkred; text-decoration: none;">Payment History</a>
+                <a href="/chimudra/payments/history/<%=session.userId%>" style="margin-right: 15px; color: darkred; text-decoration: none;">Payment History</a>
             <% } %>
         
             <% if (!session.userId ) { %>
