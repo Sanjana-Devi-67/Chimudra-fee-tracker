@@ -13,12 +13,12 @@
 
 ## Setup & Installation
 - 1.Clone the repository
-  **git clone https://github.com/yourusername/chinmudra-admin-dashboard.git
-  **cd chinmudra-admin-dashboard
+   git clone https://github.com/yourusername/chinmudra-admin-dashboard.git
+   cd chinmudra-admin-dashboard
 - 2.Install dependencies
-   **npm install
+   npm install
 - 3.Configure environment variables (.env file)
 - 4.Start the server
-   **npm start
+     npm start
 - 5.Open http://localhost:8080 in your browser
 
