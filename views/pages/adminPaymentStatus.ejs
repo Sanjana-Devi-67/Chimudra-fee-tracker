@@ -60,7 +60,7 @@
         <tr>
           <th class="p-3">Name</th>
           <th class="p-3">Email</th>
-          <!-- <th class="p-3">Action</th> -->
+          <th class="p-3">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -68,11 +68,11 @@
           <tr class="border-b border-gray-300">
             <td class="p-3 text-center"><%= student.name %></td>
             <td class="p-3 text-center"><%= student.email %></td>
-            <!-- <td class="p-3 text-center">
+            <td class="p-3 text-center">
               <form action="/chimudra/admin/notify/<%= student._id %>" method="POST">
                 <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Send Notification</button>
               </form>
-            </td> -->
+            </td>
           </tr>
         <% }) %>
       </tbody>
