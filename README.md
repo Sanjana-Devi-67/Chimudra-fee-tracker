@@ -1,15 +1,42 @@
-# Chinmudra Academy - Student Payment & Batch Management System
+# Chimudra Fee Tracker – Full Stack Role-Based Secure Fee Management System
 
- Chinmudra Academy is a web-based admin dashboard designed to manage student payments, batch enrollments, and notifications efficiently. The system enables admins to track paid and unpaid students, send payment reminders, and oversee batch details with a clean and user-friendly interface.
+A full-stack fee management system developed for Chimudra Academy. This application enables secure, role-based access for both admins and students to manage and track fee payments efficiently. The platform is built with scalability, data integrity, and usability in mind, ensuring that student dues and batch management can be handled smoothly through a centralized interface.
 
-## 🛠 Features
-- ✅ Admin Dashboard – View all student payments, batch details, and payment statuses
-- ✅ User Authentication – Secure login for admins and students
-- ✅ Payment Tracking – List of students who have paid and those who haven't
-- ✅ Payment History – Individual student payment records
-- ✅ Automated Notifications – Notify unpaid students via email/SMS
-- ✅ Batch Management – Track students assigned to different batches
-- ✅ Role-based Access – Different access for admins and students
+---
+
+## Features
+
+- Secure login system for admins and students using JWT-based authentication
+- Role-based access control for different user types
+- Admins can assign students to batches and track payments
+- Payment history tracking and unpaid dues monitoring
+- Automated fee notification feature for students
+- Responsive dashboard using server-side rendered EJS templates
+- Modular routing structure for clean and scalable backend architecture
+- Session handling for maintaining secure sessions
+
+---
+
+## Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB
+- EJS (Embedded JavaScript Templates)
+- JSON Web Tokens (JWT)
+- JavaScript (ES6+)
+- HTML, CSS
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js and npm
+- MongoDB (local instance or cloud connection URI)
 
 ## Setup & Installation
 - 1.Clone the repository
@@ -19,6 +46,6 @@
    npm install
 - 3.Configure environment variables (.env file)
 - 4.Start the server
-     npm start
+     node server.js
 - 5.Open http://localhost:8080 in your browser
 
