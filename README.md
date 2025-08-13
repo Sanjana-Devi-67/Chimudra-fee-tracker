@@ -6,7 +6,7 @@ A full-stack fee management system developed for Chimudra Academy. This applicat
 
 ## Features
 
-- Secure login system for admins and students using JWT-based authentication
+- Secure login system for admins and students 
 - Role-based access control for different user types
 - Admins can assign students to batches and track payments
 - Payment history tracking and unpaid dues monitoring
@@ -23,7 +23,6 @@ A full-stack fee management system developed for Chimudra Academy. This applicat
 - Express.js
 - MongoDB
 - EJS (Embedded JavaScript Templates)
-- JSON Web Tokens (JWT)
 - JavaScript (ES6+)
 - HTML, CSS
 
